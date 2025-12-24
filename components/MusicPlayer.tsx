@@ -74,7 +74,7 @@ const playlist: Song[] = [
   {
     title: 'CƯỚI ĐI',
     artist: 'Changg x 2T',
-    src: `${BASE}music/CUOI_DI.mp3`,
+    src: `${BASE}music/Cuoi_Di.mp3`,
     cover: `${BASE}photos/image10.jpg`,
   },
   {
