@@ -94,6 +94,22 @@ export const MusicPlayer: React.FC = () => {
 
   const song = playlist[index];
 
+  // Auto-play on mount
+  useEffect(() => {
+    const playAudio = async () => {
+      if (audioRef.current) {
+        try {
+          await audioRef.current.play();
+          setIsPlaying(true);
+        } catch (error) {
+          // Browser blocked autoplay, user needs to click play
+          console.log('Autoplay blocked, user interaction required');
+        }
+      }
+    };
+    playAudio();
+  }, []);
+
   const togglePlay = () => {
     if (!audioRef.current) return;
 
