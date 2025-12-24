@@ -7,6 +7,7 @@ import { UIOverlay } from './components/UIOverlay';
 import { GestureController } from './components/GestureController';
 import { TreeMode } from './types';
 import { MusicPlayer } from './components/MusicPlayer';
+import { getAssetPath } from './utils';
 
 // Simple Error Boundary to catch 3D resource loading errors (like textures)
 class ErrorBoundary extends React.Component<{children: React.ReactNode}, {hasError: boolean}> {
@@ -53,18 +54,18 @@ export default function App() {
   const [handPosition, setHandPosition] = useState<{ x: number; y: number; detected: boolean }>({ x: 0.5, y: 0.5, detected: false });
   // Pre-load default photos from public/photos folder
   const [uploadedPhotos, setUploadedPhotos] = useState<string[]>([
-    '/photos/image1.jpg',
-    '/photos/image2.jpg',
-    '/photos/image3.jpg',
-    '/photos/image4.jpg',
-    '/photos/image5.jpg',
-    '/photos/image6.jpg',
-    '/photos/image7.jpg',
-    '/photos/image8.jpg',
-    '/photos/image9.jpg',
-    '/photos/image10.jpg',
-    '/photos/image11.jpg',
-    '/photos/image12.jpg',
+    `${import.meta.env.BASE_URL}photos/image1.jpg`,
+    `${import.meta.env.BASE_URL}photos/image2.jpg`,
+    `${import.meta.env.BASE_URL}photos/image3.jpg`,
+    `${import.meta.env.BASE_URL}photos/image4.jpg`,
+    `${import.meta.env.BASE_URL}photos/image5.jpg`,
+    `${import.meta.env.BASE_URL}photos/image6.jpg`,
+    `${import.meta.env.BASE_URL}photos/image7.jpg`,
+    `${import.meta.env.BASE_URL}photos/image8.jpg`,
+    `${import.meta.env.BASE_URL}photos/image9.jpg`,
+    `${import.meta.env.BASE_URL}photos/image10.jpg`,
+    `${import.meta.env.BASE_URL}photos/image11.jpg`,
+    `${import.meta.env.BASE_URL}photos/image12.jpg`,
     // Add more image paths here as needed
   ]);
   const [twoHandsDetected, setTwoHandsDetected] = useState(false);

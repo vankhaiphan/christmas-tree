@@ -8,78 +8,80 @@ interface Song {
   cover: string;
 }
 
+const BASE = import.meta.env.BASE_URL;
+
 const playlist: Song[] = [
   {
     title: 'All I Want For Christmas Is You',
     artist: 'Mariah Carey',
-    src: '/music/All_I_Want_For_Christmas_Is_You.mp3',
-    cover: '/photos/image12.jpg',
+    src: `${BASE}music/All_I_Want_For_Christmas_Is_You.mp3`,
+    cover: `${BASE}photos/image12.jpg`,
   },
   {
     title: 'Perfect',
     artist: 'Ed Sheeran',
-    src: '/music/Perfect.mp3',
-    cover: '/photos/image2.jpg',
+    src: `${BASE}music/Perfect.mp3`,
+    cover: `${BASE}photos/image2.jpg`,
   },
   {
     title: 'I Think They Call This Love',
     artist: 'Elliot James Reay',
-    src: '/music/I_Think_They_Call_This_Love.mp3',
-    cover: '/photos/image3.jpg',
+    src: `${BASE}music/I_Think_They_Call_This_Love.mp3`,
+    cover: `${BASE}photos/image3.jpg`,
   },
   {
     title: 'Everytime',
     artist: 'Chen (EXO) & Punch',
-    src: '/music/Everytime.mp3',
-    cover: '/photos/image4.jpg',
+    src: `${BASE}music/Everytime.mp3`,
+    cover: `${BASE}photos/image4.jpg`,
   },
   {
     title: 'Say Yes',
     artist: 'Loco & Punch',
-    src: '/music/Say_Yes.mp3',
-    cover: '/photos/image5.jpg',
+    src: `${BASE}music/Say_Yes.mp3`,
+    cover: `${BASE}photos/image5.jpg`,
   },
   {
     title: 'This Love',
     artist: 'DAVICHI',
-    src: '/music/This_Love.mp3',
-    cover: '/photos/image6.jpg',
+    src: `${BASE}music/This_Love.mp3`,
+    cover: `${BASE}photos/image6.jpg`,
   },
   {
     title: 'Gặp em đúng lúc',
     artist: 'Luân Tang',
-    src: '/music/Gap_Em_Dung_Luc.mp3',
-    cover: '/photos/image7.jpg',
+    src: `${BASE}music/Gap_Em_Dung_Luc.mp3`,
+    cover: `${BASE}photos/image7.jpg`,
   },
   {
     title: 'Tong Hua',
     artist: 'Michael Wong',
-    src: '/music/Tong_Hua.mp3',
-    cover: '/photos/image8.jpg',
+    src: `${BASE}music/Tong_Hua.mp3`,
+    cover: `${BASE}photos/image8.jpg`,
   },
   {
     title: 'See Tình',
     artist: 'Hoàng Thùy Linh',
-    src: '/music/See_Tinh.mp3',
-    cover: '/photos/image9.jpg',
+    src: `${BASE}music/See_Tinh.mp3`,
+    cover: `${BASE}photos/image9.jpg`,
   },
   {
     title: 'To The Moon',
     artist: 'hooligan',
-    src: '/music/TO_THE_MOON.mp3',
-    cover: '/photos/image11.jpg',
+    src: `${BASE}music/TO_THE_MOON.mp3`,
+    cover: `${BASE}photos/image11.jpg`,
   },
   {
     title: 'CƯỚI ĐI',
     artist: 'Changg x 2T',
-    src: '/music/CUOI_DI.mp3',
-    cover: '/photos/image10.jpg',
+    src: `${BASE}music/CUOI_DI.mp3`,
+    cover: `${BASE}photos/image10.jpg`,
   },
   {
     title: 'Một Nhà',
     artist: 'Da LAB',
-    src: '/music/Mot_Nha.mp3',
-    cover: '/photos/image1.jpg',
+    src: `${BASE}music/Mot_Nha.mp3`,
+    cover: `${BASE}photos/image1.jpg`,
   },
 ];
 
