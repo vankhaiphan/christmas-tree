@@ -2,10 +2,9 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Set base to '/' for custom domain or './' for username.github.io/repo-name
-// Change this to '/christmas-tree/' if deploying to username.github.io/christmas-tree
+// Set base to '/christmas-tree/' for GitHub Pages deployment at username.github.io/christmas-tree
 export default defineConfig({
-  base: './',
+  base: '/christmas-tree/',
   server: {
     port: 3010,
     host: '0.0.0.0',
