@@ -87,8 +87,8 @@ export const Experience: React.FC<ExperienceProps> = ({ mode, handPosition, uplo
 
       {/* Lighting Setup for Maximum Luxury */}
       {/* Change preset to: apartment, city, dawn, forest, lobby, night, park, studio, sunset, warehouse */}
-      {/* <Environment preset="sunset" background={false} blur={0.8} /> */}
-      <Environment files="public/photos/flower.hdr" background={false} blur={0.8} />
+      <Environment preset="sunset" background={false} blur={0.8} />
+      {/* If using custom HDR: <Environment files="/photos/flower.hdr" background={false} blur={0.8} /> */}
 
       
       <ambientLight intensity={0.2} color="#004422" />
