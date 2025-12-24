@@ -38,7 +38,7 @@ export const GestureController: React.FC<GestureControllerProps> = ({ onModeChan
         // Model file should be downloaded using: npm run download-model or download-model.bat/.sh
         handLandmarker = await HandLandmarker.createFromOptions(vision, {
           baseOptions: {
-            modelAssetPath: `/models/hand_landmarker.task`,
+            modelAssetPath: `${import.meta.env.BASE_URL}models/hand_landmarker.task`,
             delegate: "GPU"
           },
           runningMode: "VIDEO",
@@ -288,6 +288,12 @@ export const GestureController: React.FC<GestureControllerProps> = ({ onModeChan
   return (
     <div className="absolute top-6 right-[8%] z-50 flex flex-col items-end pointer-events-none">
 
+      {/* Status Message */}
+      {gestureStatus === "Permission Denied" && (
+        <div className="mb-2 px-4 py-2 bg-red-900/80 border border-red-500 rounded text-white text-sm pointer-events-auto">
+          Camera access denied. Please enable camera permissions.
+        </div>
+      )}
       
       {/* Camera Preview Frame */}
       <div className="relative w-[18.75vw] h-[14.0625vw] border-2 border-[#D4AF37] rounded-lg overflow-hidden shadow-[0_0_20px_rgba(212,175,55,0.3)] bg-black">
