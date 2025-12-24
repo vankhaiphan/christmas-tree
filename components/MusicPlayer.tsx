@@ -50,7 +50,7 @@ const playlist: Song[] = [
   {
     title: 'Gặp em đúng lúc',
     artist: 'Luân Tang',
-    src: `${BASE}music/Gap_Em_Dung_Luc.mp3`,
+    src: `${BASE}music/Gap_em_dung_luc.mp3`,
     cover: `${BASE}photos/image7.jpg`,
   },
   {
